@@ -1,3 +1,7 @@
-El día 22/07/2014
+El dï¿½a 22/07/2014
 
-Agregué y expliqué el algorithmo shell-sort al repositorio.
+Agreguï¿½ y expliquï¿½ el algorithmo shell-sort al repositorio.
+
+El dÃ­a 24/07/2014
+
+SaquÃ© la comprobacion matemÃ¡tica del algorithmo merge-sort
