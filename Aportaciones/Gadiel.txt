@@ -1,0 +1,3 @@
+El día 22/07/2014
+
+Agregué y expliqué el algorithmo shell-sort al repositorio.
