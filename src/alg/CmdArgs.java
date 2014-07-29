@@ -41,6 +41,8 @@ public class CmdArgs {
                             sortAlg = SortAlg.MERGE_SORT;
                         } else if (arg.compareTo("--quick-sort") == 0) {
                             sortAlg = SortAlg.QUICK_SORT;
+						} else if (arg.compareTo("--quick-shell-sort") == 0) {
+                            sortAlg = SortAlg.QUICK_SHELL_SORT;
                         } else if (arg.compareTo("--count") == 0) {
                             context = 1;
                         } else if (arg.compareTo("--input") == 0) {

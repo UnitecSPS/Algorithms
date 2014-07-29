@@ -1,6 +1,6 @@
 package alg;
 
-import alg.sort.BubbleSort;
+import alg.sort.*;
 import alg.sort.InsertionSort;
 import alg.sort.MergeSort;
 import alg.sort.QuickSort;
@@ -81,6 +81,9 @@ public class Main {
                 break;
             case SortAlg.QUICK_SORT:
                 sa = new QuickSort();
+                break;
+			case SortAlg.QUICK_SHELL_SORT:
+                sa = new QuickShellSort();
                 break;
         }
         

@@ -26,4 +26,5 @@ public abstract class SortAlg {
     public static final int SHELL_SORT = 3;
     public static final int MERGE_SORT = 9;
     public static final int QUICK_SORT = 10;
+	public static final int QUICK_SHELL_SORT = 11;
 }

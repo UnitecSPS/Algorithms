@@ -39,4 +39,24 @@ public class ShellSort extends SortAlg {
         }
     }
     
+    public void SortLowHigh(Comparable[] items, int low, int high) {
+    	for(int gap : gaps)
+        {
+            for (int i = (gap+(low-1)); i <= high; i += 1)
+            {
+                
+                Comparable temp = items[i];
+                int j = i;
+                for ( ; j >= gap && items[j - gap].compareTo(temp)>0; j -= gap)
+                {
+                    items[j] = items[j - gap];
+                }
+                //# put temp (the original a[i]) in its correct location
+                items[j] = temp;
+            }
+
+        }
+    	
+    }
+    
 }
