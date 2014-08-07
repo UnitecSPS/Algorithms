@@ -18,18 +18,32 @@ public class Util {
 
     public static SecureRandom sr = null;
 
-    public static Integer[] GenerateRandomArray(int size) 
+    public static Integer[] GenerateRandomArray(int size, int min, int max) 
     {
         if (sr == null) {
             return null;
         }
 
         Integer[] result = new Integer[size];
+        
+        int n = (max - min) + 1;
         for (int i = 0; i < size; i++) {
-            result[i] = sr.nextInt() % 65536;
+            result[i] = (Math.abs(sr.nextInt()) % n) + min;
         }
 
         return result;
+    }
+    
+    public static Integer StringToInt(String snumber) {
+        int number = 0;
+        
+        try {
+            number = Integer.parseInt(snumber, 10);
+        } catch (NumberFormatException ex) {
+            return null;
+        }
+        
+        return new Integer(number);
     }
 
     public static void PrintArray(Comparable[] items) 

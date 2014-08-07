@@ -24,7 +24,7 @@ public class Main {
         if (CmdArgs.genenerateRandomSet) {
             long startTime = System.currentTimeMillis();
 
-            Integer[] items = Util.GenerateRandomArray(CmdArgs.arraySize);
+            Integer[] items = Util.GenerateRandomArray(CmdArgs.arraySize, CmdArgs.minValue, CmdArgs.maxValue);
 
             long stopTime = System.currentTimeMillis();
             long elapsedTime = stopTime - startTime;
@@ -102,7 +102,7 @@ public class Main {
     private static void showUsage() {
         System.err.println("Usage: ");
         System.err.println("1. To generate a random set of integers:");
-        System.err.println("    java -jar Alg.jar --generate-random-set --count <size>");
+        System.err.println("    java -jar Alg.jar --generate-random-set --count <size> [--range min:max]");
         System.err.println("2. To sort an array from a file:");
         System.err.println("    java -jar Alg.jar --input <file> [--bubble-sort |--selection-sort|--insertion-sort|--merge-sort |--quick-sort] [--print-original-array] [--print-sorted-array]");
     }    

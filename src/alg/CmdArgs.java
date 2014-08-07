@@ -14,6 +14,8 @@ public class CmdArgs {
     public static int arraySize = 100;
     public static String inputFilePath = "";
     public static int sortAlg = SortAlg.BUBBLE_SORT;
+    public static int minValue = 0;
+    public static int maxValue = Integer.MAX_VALUE - 1;
 
     public static boolean parse(String[] args) {
         int context = 0;
@@ -45,6 +47,8 @@ public class CmdArgs {
                             context = 1;
                         } else if (arg.compareTo("--input") == 0) {
                             context = 2;
+                        } else if (arg.compareTo("--range") == 0) {
+                            context = 3;
                         } else {
                             System.out.println("Invalid argument '" + arg + "'");
                             return false;
@@ -59,10 +63,33 @@ public class CmdArgs {
                         }
                         context = 0;
                         break;
-                    case 2:
+                    case 2: //Input file
                         inputFilePath = arg;
                         context = 0;
                         break;
+                    case 3: {   //Set range
+                        String s[] = arg.split(":");
+                        if (s.length != 2) {
+                            System.out.println("Invalid range '" + arg + "'");
+                            System.exit(0);
+                        } else {
+                            Integer value = Util.StringToInt(s[0]);
+                            if (value == null) {
+                                System.out.println("Invalid number '" + s[0] + "'");
+                                System.exit(0);
+                            } else {
+                                minValue = value.intValue();
+                            }
+                            value = Util.StringToInt(s[1]);
+                            if (value == null) {
+                                System.out.println("Invalid number '" + s[1] + "'");
+                                System.exit(0);
+                            } else {
+                                maxValue = value.intValue();
+                            }                            
+                        }
+                        break;
+                    }
                 }
             }
         } else {
