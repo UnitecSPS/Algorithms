@@ -1,0 +1,11 @@
+El d�a 22/07/2014
+
+Agregu� y expliqu� el algorithmo shell-sort al repositorio.
+
+El día 24/07/2014
+
+Saqué la comprobacion matemática del algorithmo merge-sort
+
+El día 29/07/2014
+
+Agregué el algoritmo shell al quicksort, creando quick-shell-sort al branch gadiel
