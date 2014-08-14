@@ -9,3 +9,7 @@ Saqué la comprobacion matemática del algorithmo merge-sort
 El día 29/07/2014
 
 Agregué el algoritmo shell al quicksort, creando quick-shell-sort al branch gadiel
+
+El día 14/8/2014
+
+Pasé a la pizarra a resolver la segunda funcion usando el teorema maestro
