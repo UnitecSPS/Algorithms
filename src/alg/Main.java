@@ -7,6 +7,7 @@ import alg.sort.QuickSort;
 import alg.sort.SelectionSort;
 import alg.sort.ShellSort;
 import alg.sort.SortAlg;
+import alg.sort.HeapSort;
 import java.io.IOException;
 
 /**
@@ -15,8 +16,8 @@ import java.io.IOException;
  */
 public class Main {
     
-    public static void main(String[] args) {
-        if (!CmdArgs.parse(args)) {
+    public static void main(String[] args) {		
+		if (!CmdArgs.parse(args)) {
             showUsage();
             System.exit(0);
         }
@@ -82,6 +83,9 @@ public class Main {
             case SortAlg.QUICK_SORT:
                 sa = new QuickSort();
                 break;
+            case SortAlg.HEAP_SORT:
+                sa = new HeapSort();
+                break;
         }
         
         sa.Sort(items);
@@ -104,6 +108,6 @@ public class Main {
         System.err.println("1. To generate a random set of integers:");
         System.err.println("    java -jar Alg.jar --generate-random-set --count <size>");
         System.err.println("2. To sort an array from a file:");
-        System.err.println("    java -jar Alg.jar --input <file> [--bubble-sort |--selection-sort|--insertion-sort|--merge-sort |--quick-sort] [--print-original-array] [--print-sorted-array]");
+        System.err.println("    java -jar Alg.jar --input <file> [--bubble-sort |--selection-sort |--insertion-sort |--shell-sort |--merge-sort |--quick-sort |--heap-sort] [--print-original-array] [--print-sorted-array]");
     }    
 }

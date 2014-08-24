@@ -1,13 +1,18 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package alg;
 
 import alg.sort.SortAlg;
 
 /**
  *
- * @author ideras
+ * @author Usuario
  */
 public class CmdArgs {
-
     public static boolean printOriginalArray = false;
     public static boolean printSortedArray = false;
     public static boolean genenerateRandomSet = false;
@@ -41,6 +46,8 @@ public class CmdArgs {
                             sortAlg = SortAlg.MERGE_SORT;
                         } else if (arg.compareTo("--quick-sort") == 0) {
                             sortAlg = SortAlg.QUICK_SORT;
+                        }else if ( arg.compareTo("--heap-sort") == 0 ){
+                            sortAlg = SortAlg.HEAP_SORT;
                         } else if (arg.compareTo("--count") == 0) {
                             context = 1;
                         } else if (arg.compareTo("--input") == 0) {
